@@ -11,12 +11,18 @@
     padding-top: 10px;
 }
 
-.upload {
+.upload-btn {
     padding-top: 20px;
     display:flex;
     justify-content:center;
     align-items: center;
     position:relative;
-    
-    
+}
+
+.submit-btn {
+    padding-top: 20px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    position:relative;
 }

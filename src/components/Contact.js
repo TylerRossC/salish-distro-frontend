@@ -4,6 +4,7 @@ import TextField from '@mui/material/TextField';
 import './Contact.css'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import NavigationIcon from '@mui/icons-material/Navigation';
 import { flexbox } from '@mui/system';
 
 
@@ -53,10 +54,18 @@ const Contact = () => {
         />
         </div>
         <div>
-          <Box className="upload" sx={{ '& > :not(style)': { m: 1 } }}>
+          <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }}>
           <Fab variant="extended" size="medium" color="primary" aria-label="add">
             <AddIcon sx={{ mr: 1 }} />
             Upload
+          </Fab>
+          </Box>
+        </div>
+        <div>
+          <Box className="submit-btn" sx={{ '& > :not(style)': { m: 1 } }}>
+          <Fab variant="extended" size="medium" color="primary" aria-label="add">
+          <NavigationIcon sx={{ mr: 1 }} />
+            Submit
           </Fab>
           </Box>
         </div>
