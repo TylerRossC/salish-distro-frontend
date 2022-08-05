@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+  background-image: url("https://dsm01pap006files.storage.live.com/y4mhJ-VCM1RdoOo2ouHJyiJmtE_8jw7ImNFfSPCKouo49W1xRU0dON25am8-Bunww6Nl5SFkOlKObajbW4hk0FjvVMaw5ws7Fx5eiFuPCwfbrLdwWTU5gTiubKFYZXHDqMjyak5AGl1_brSk0-48YcDXxg14IiySu9uQTsDbMHi4MmA4NMhXZk_CXxQejRXB_OHnZPKIT5RV7Kw866gcLwBat9ge1p5C1JS2irCS-sXBMU?encodeFailures=1&width=879&height=879");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center ;
+    min-width: 1024px;
+    min-height: 120%;
+    width: 100%;
+    height: auto;
+    position:fixed;
 }
 
 .App-logo {

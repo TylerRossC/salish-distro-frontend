@@ -20,56 +20,57 @@ const Contact = () => {
   };
 
   return (
-  
-    <div className='form'>
-        <Box
-        component="form"
-        sx={{
-          '& > :not(style)': { m: 1, width: '40ch' },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <TextField
-          className="name"
-          label="Name"
-          value={name}
-          onChange={handleChange}
-        />
-        <TextField
-          className="email"
-          label="Email"
-          value={email}
-          onChange={handleChange}
-        />
-        <div className="comments">
-        <TextField
-        sx={{
-          '& > :not(style)': { height: '20ch' },
-        }}
-          className="comments"
-          label="Comments"
-          value={comments}
-          onChange={handleChange}
-        />
-        </div>
-        <div>
-          <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }}>
-          <Fab variant="extended" size="medium" color="primary" aria-label="add">
-            <AddIcon sx={{ mr: 1 }} />
-            Upload
-          </Fab>
+    <div className="contact">
+      <div className='form'>
+          <Box
+          component="form"
+          sx={{
+            '& > :not(style)': { m: 1, width: '40ch' },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            className="name"
+            label="Name"
+            value={name}
+            onChange={handleChange}
+          />
+          <TextField
+            className="email"
+            label="Email"
+            value={email}
+            onChange={handleChange}
+          />
+          <div className="comments">
+          <TextField
+          sx={{
+            '& > :not(style)': { height: '20ch' },
+          }}
+            className="comments"
+            label="Comments"
+            value={comments}
+            onChange={handleChange}
+          />
+          </div>
+          <div>
+            <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }}>
+            <Fab variant="extended" size="medium" color="primary" aria-label="add">
+              <AddIcon sx={{ mr: 1 }} />
+              Upload
+            </Fab>
+            </Box>
+          </div>
+          <div>
+            <Box className="submit-btn" sx={{ '& > :not(style)': { m: 1 } }}>
+            <Fab variant="extended" size="medium" color="primary" aria-label="add">
+            <NavigationIcon sx={{ mr: 1 }} />
+              Submit
+            </Fab>
+            </Box>
+          </div>
           </Box>
-        </div>
-        <div>
-          <Box className="submit-btn" sx={{ '& > :not(style)': { m: 1 } }}>
-          <Fab variant="extended" size="medium" color="primary" aria-label="add">
-          <NavigationIcon sx={{ mr: 1 }} />
-            Submit
-          </Fab>
-          </Box>
-        </div>
-        </Box>
+      </div>
     </div>
   );
 }

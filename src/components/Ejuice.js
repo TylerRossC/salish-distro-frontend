@@ -5,7 +5,7 @@ const Ejuice = () => {
   return (
     <div>
     Ejuice
-    <ProductCards/>
+    {/* <ProductCards/> */}
     </div>
   )
 }

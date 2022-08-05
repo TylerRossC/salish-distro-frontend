@@ -2,7 +2,9 @@ import React from 'react'
 
 const Disposables = () => {
   return (
-    <div>Disposables</div>
+    <div className="disposables">
+    Disposables
+    </div>
   )
 }
 

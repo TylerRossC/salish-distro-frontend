@@ -163,7 +163,7 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Sky Vapor
+          Salish Distro
           </Typography>
           <Search>
             <SearchIconWrapper>
