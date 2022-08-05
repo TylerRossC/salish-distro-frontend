@@ -1,13 +1,37 @@
 import './App.css';
 import Navbar from './components/Navbar'
+import {Routes, Route} from 'react-router-dom'
+import Home from './components/Home'
+import Ejuice from './components/Ejuice'
+import Disposables from './components/Disposables'
+import Hardware from './components/Hardware'
+import Contact from './components/Contact'
 
 function App() {
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar/>
+      <Navbar/>
+      
+
+      <Routes>
         
-      </header>
+          <Route path="home" element={<Home/>}/>
+          <Route path='/ejuice' element={<Ejuice/>}/>
+          <Route path='/disposables' element={<Disposables/>}/>
+          <Route path='/hardware' element={<Hardware/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+          
+      </Routes>
     </div>
   );
 }
