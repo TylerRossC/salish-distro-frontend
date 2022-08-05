@@ -15,6 +15,8 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
+import { useNavigate } from 'react-router-dom';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -58,11 +60,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
 const Navbar = () => {
 
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
+  const navigate = useNavigate();
+
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
@@ -72,7 +75,6 @@ const Navbar = () => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
-
     setOpen(false);
   };
 
@@ -94,7 +96,6 @@ const Navbar = () => {
 
     prevOpen.current = open;
   }, [open]);
-  
   
     return (
       <Box sx={{ flexGrow: 1 }}>
@@ -140,12 +141,14 @@ const Navbar = () => {
                     id="composition-menu"
                     aria-labelledby="composition-button"
                     onKeyDown={handleListKeyDown}
+                    onClick={handleClose}
                   >
-                    <MenuItem onClick={handleClose}>Home</MenuItem>
-                    <MenuItem onClick={handleClose}>Ejuice</MenuItem>
-                    <MenuItem onClick={handleClose}>Disposables</MenuItem>
-                    <MenuItem onClick={handleClose}>Hardware</MenuItem>
-                    <MenuItem onClick={handleClose}>Contact</MenuItem>
+                    <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
+                    <MenuItem onClick={() => navigate("/ejuice")}>Ejuice</MenuItem>
+                    <MenuItem onClick={() => navigate("/disposables")}>Disposables</MenuItem>
+                    <MenuItem onClick={() => navigate("/hardware")}>Hardware</MenuItem>
+                    <MenuItem onClick={() => navigate("/contact")}>Contact</MenuItem>
+
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
