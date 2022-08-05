@@ -10,3 +10,13 @@
     width: 708px;
     padding-top: 10px;
 }
+
+.upload {
+    padding-top: 20px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    position:relative;
+    
+    
+}
