@@ -99,7 +99,7 @@ const Navbar = () => {
   
     return (
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar className="app-bar" position="static">
         <Toolbar>
         <Stack direction="row" spacing={2}>
       <div>
@@ -157,11 +157,11 @@ const Navbar = () => {
         </Popper>
       </div>
     </Stack>
-          <Typography
-            variant="h6"
+          <Typography className="sky-logo"
+            variant="h5"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, pl: 14 }}
           >
           Salish Distro
           </Typography>

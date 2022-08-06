@@ -36,7 +36,7 @@ const Contact = () => {
             value={name}
             onChange={handleChange}
           />
-          <TextField
+          <TextField 
             className="email"
             label="Email"
             value={email}
