@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-image: url("images/Sky-Logo-Final_27%.png");
+  background-image: url(https://dsm01pap006files.storage.live.com/y4m7dcquO0kdPXG6Cp7XXx4UIbolHb0IBHMP8AjWmpcDM8kbERkwL0IvtF2P_zb-LEOmStKOOT0Zgj16aXdGzhOxKsKiMD1lm6m76kI9gfLf7n9HEWM6Usx8VQdFmj8kJpxWs0_-dVIqH_fKBdk-dteLEpfU9IMDJVLwt_R793GgDxzuF1UIBwsfp_g-3-nUagT7lxmIbGA0oxWoGBO0k5U4-X2HFqtjqZJvh09PQDSxXc?encodeFailures=1&width=875&height=875);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center ;
@@ -9,17 +9,6 @@
     width: 100%;
     height: auto;
     position:fixed;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
