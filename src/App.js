@@ -6,23 +6,26 @@ import Ejuice from './components/Ejuice'
 import Disposables from './components/Disposables'
 import Hardware from './components/Hardware'
 import Contact from './components/Contact'
-// import { ThemeProvider, createTheme } from '@mui/material/styles';
-// import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
 
 
 
 function App() {
   
-  // const darkTheme = createTheme({
-  //   palette: {
-  //     mode: 'dark',
-  //   },
-  // });
   
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#488FCD',
+      },
+    },
+  });
   
   return (
+    <ThemeProvider theme={theme}>
     <div className="App">
-      <Navbar/>
+      <Navbar />
       
       <Routes>
         
@@ -35,6 +38,7 @@ function App() {
           
       </Routes>
     </div>
+    </ThemeProvider>
   );
 }
 

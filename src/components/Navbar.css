@@ -1,3 +1,17 @@
-.sky-logo {
+.app-bar {
+    height:105px;
+    /* background-color: black; */
     
+}
+
+.sky-logo {
+    padding-top: 25px;
+}
+
+.menu-icon {
+    padding-top: 25px;
+}
+
+.search {
+    padding-top: 25px;
 }

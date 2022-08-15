@@ -7,14 +7,12 @@
     padding-top: 100px;
     display: flex;
     justify-content: center;
-    align-items: center;;
-    
+    align-items: center;
 }
 
 .comments {
     width: 708px;
     padding-top: 10px;
-    /* background-color:dimgrey; */
 }
 
 .upload-btn {

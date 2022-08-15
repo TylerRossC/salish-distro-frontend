@@ -15,8 +15,8 @@ const ProductCards = () => {
 				<div class="container">
 					<div class="front" >
 						<div class="inner">
-							<p>Product Img</p>
-              <span>Product name</span>
+							<p>Brand Image</p>
+              <span>Brand name</span>
 						</div>
 					</div>
 					<div class="back">

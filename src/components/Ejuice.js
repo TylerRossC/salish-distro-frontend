@@ -5,6 +5,9 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
 const Ejuice = () => {
+
+
+  
   return (
     <div className="ejuice">
     Ejuice

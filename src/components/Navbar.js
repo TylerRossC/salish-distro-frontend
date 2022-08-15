@@ -16,6 +16,9 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import Stack from '@mui/material/Stack';
 import { useNavigate } from 'react-router-dom';
+import "./Navbar.css"
+
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -60,6 +63,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
 const Navbar = () => {
 
   const [open, setOpen] = React.useState(false);
@@ -98,12 +102,12 @@ const Navbar = () => {
   }, [open]);
   
     return (
-      <Box sx={{ flexGrow: 1 }}>
+      <Box  sx={{ flexGrow: 1}}>
       <AppBar className="app-bar" position="static">
         <Toolbar>
         <Stack direction="row" spacing={2}>
-      <div>
-          <IconButton
+      <div className="menu-icon">
+          <IconButton 
             ref={anchorRef}
             id="composition-button"
             aria-controls={open ? 'composition-menu' : undefined}
@@ -116,7 +120,7 @@ const Navbar = () => {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+            <MenuIcon  />
           </IconButton>
           <Popper
           open={open}
@@ -158,13 +162,14 @@ const Navbar = () => {
       </div>
     </Stack>
           <Typography className="sky-logo"
-            variant="h5"
+            variant="h4"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, pl: 14 }}
           >
           Salish Distro
           </Typography>
+          <div className="search">
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -174,6 +179,7 @@ const Navbar = () => {
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+          </div>
         </Toolbar>
       </AppBar>
     </Box>

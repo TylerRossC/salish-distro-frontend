@@ -19,6 +19,7 @@ const Contact = () => {
     setComments(event.target.value);
   };
 
+
   return (
     <div className="contact">
       <div className='form'>
