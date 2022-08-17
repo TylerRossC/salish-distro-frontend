@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled, alpha, useTheme } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -65,10 +65,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 const Navbar = () => {
-
+  
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
   const navigate = useNavigate();
+  
+  let theme = useTheme()
 
 
   const handleToggle = () => {
@@ -102,8 +104,8 @@ const Navbar = () => {
   }, [open]);
   
     return (
-      <Box  sx={{ flexGrow: 1}}>
-      <AppBar className="app-bar" position="static">
+      <Box  sx={{ flexGrow: 1 }} >
+      <AppBar className="app-bar" position="static"  >
         <Toolbar>
         <Stack direction="row" spacing={2}>
       <div className="menu-icon">

@@ -16,7 +16,7 @@ const Ejuice = () => {
     </div>
     <div className="pagination">
     <Stack spacing={2}>
-      <Pagination count={10} color="primary" />
+      <Pagination count={10} color="primary"  />
     </Stack>
     </div>
     </div>

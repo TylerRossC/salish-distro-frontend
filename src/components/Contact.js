@@ -5,10 +5,13 @@ import './Contact.css'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import NavigationIcon from '@mui/icons-material/Navigation';
+import { useTheme } from '@mui/material/styles';
 
 
 
 const Contact = () => {
+
+  let theme = useTheme()
 
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
@@ -56,7 +59,7 @@ const Contact = () => {
           </div>
           <div>
             <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }}>
-            <Fab variant="extended" size="medium" color="primary" aria-label="add">
+            <Fab variant="extended" size="medium" sx={{bgcolor: 'secondary.main'}} aria-label="add">
               <AddIcon sx={{ mr: 1 }} />
               Upload
             </Fab>
@@ -64,7 +67,7 @@ const Contact = () => {
           </div>
           <div>
             <Box className="submit-btn" sx={{ '& > :not(style)': { m: 1 } }}>
-            <Fab variant="extended" size="medium" color="primary" aria-label="add">
+            <Fab variant="extended" size="medium" sx={{bgcolor: 'secondary.main'}} aria-label="add">
             <NavigationIcon sx={{ mr: 1 }} />
               Submit
             </Fab>

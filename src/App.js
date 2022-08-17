@@ -14,9 +14,12 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 function App() {
   
   
-  const theme = createTheme({
+  let theme = createTheme({
     palette: {
       primary: {
+        main: '#212121',
+      },
+      secondary: {
         main: '#488FCD',
       },
     },
@@ -25,7 +28,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
     <div className="App">
-      <Navbar />
+      <Navbar theme={theme} />
       
       <Routes>
         
@@ -34,7 +37,7 @@ function App() {
           <Route path='/ejuice' element={<Ejuice/>}/>
           <Route path='/disposables' element={<Disposables/>}/>
           <Route path='/hardware' element={<Hardware/>}/>
-          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/contact' element={<Contact/>} theme={theme} />
           
       </Routes>
     </div>
