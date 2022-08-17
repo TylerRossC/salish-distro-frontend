@@ -5,10 +5,11 @@
     background-size: contain;
     background-position: center ;
     min-width: 1024px;
-    min-height: 120%;
+    min-height: 140%;
     width: 100%;
     height: auto;
     position:fixed;
+    
 }
 
 .App-header {
