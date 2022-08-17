@@ -163,14 +163,6 @@ const Navbar = () => {
         </Popper>
       </div>
     </Stack>
-          <Typography className="sky-logo"
-            variant="h4"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, pl: 14 }}
-          >
-          Salish Distro
-          </Typography>
           <div className="search">
           <Search>
             <SearchIconWrapper>
