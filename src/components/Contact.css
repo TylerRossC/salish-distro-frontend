@@ -4,29 +4,35 @@
 } */
 
 .form {
-    padding-top: 200px;
+    padding-top: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center
 }
 
 .comments {
     width: 708px;
     padding-top: 10px;
+    /* background-color: rgba(0,0,0,.5);
+    color: #fff; */
 }
 
 .upload-btn {
     padding-top: 20px;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    position:relative;
+    position: absolute;
+    display: inline-block;
 }
 
 .submit-btn {
     padding-top: 20px;
-    display:inline;
-    justify-content:center;
-    align-items: center;
-    position:relative;
+    padding-left: 200px;
+    position: absolute;
+    display: inline-block;
+}
+
+.upload-msg {
+    padding-top: 20px;
+    text-decoration: underline;
+    text-decoration-color: red;
 }

@@ -25,6 +25,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
+    <h2 className="upload-msg">Please upload EIN & UBI before submitting!</h2>
       <div className='form'>
           <Box
           component="form"
@@ -39,6 +40,7 @@ const Contact = () => {
             label="Name"
             value={name}
             onChange={handleChange}
+            sx={{}}
           />
           <TextField 
             className="email"
