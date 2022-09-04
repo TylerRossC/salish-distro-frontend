@@ -4,11 +4,11 @@
 } */
 
 .form {
-    padding-top: 140px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center
+    text-align: center;
 }
 
 .comments {
@@ -16,6 +16,11 @@
     padding-top: 10px;
     /* background-color: rgba(0,0,0,.5);
     color: #fff; */
+}
+
+.attachments {
+    width: 708px;
+    padding-top: 100px;
 }
 
 .upload-btn {

@@ -9,6 +9,9 @@
     width: 100%;
     height: auto;
     position:fixed;
+    white-space: nowrap;
+    overflow-x: auto;
+    
     
 }
 
