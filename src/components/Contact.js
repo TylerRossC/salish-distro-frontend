@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import './Contact.css'
@@ -13,13 +13,13 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
-  const [uploadFiles, setUploadFiles] = React.useState('');
+  // const [uploadFiles, setUploadFiles] = React.useState('');
   const fileUploadRef = useRef()
 
   const form = useRef()
 
   const sendEmail = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     
     emailjs.sendForm(
       process.env.REACT_APP_SERVICE_ID,
@@ -30,7 +30,7 @@ const Contact = () => {
       result => console.log(result.text),
       error => console.log(error.text)
     )
-    // e.target.reset()
+    
   };
 
 
