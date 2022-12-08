@@ -2,18 +2,38 @@ import './App.css';
 import Navbar from './components/Navbar'
 import {Routes, Route} from 'react-router-dom'
 import Home from './components/Home'
-import Ejuice from './components/Ejuice'
-import Disposables from './components/Disposables'
-import Hardware from './components/Hardware'
-import Contact from './components/Contact'
+import Ejuice from './components/ejuice/Ejuice'
+import Disposables from './components/disposables/Disposables'
+import Hardware from './components/hardware/Hardware'
+import Contact from './components/contact/Contact'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { useEffect, useState } from 'react';
 
 
 
 
 function App() {
+
+// const [catalogs, setCatalog] = useState([])
+const [ejuice, setEjuice] = useState([])
+const [disposables, setDisposables] = useState([])
+const [hardware, setHardware] = useState([])
+
+const fetchCatalogs = () => {
+  fetch('http://localhost:3000/catalogs')
+    .then(resp => resp.json())
+    .then(data => {
+      console.log(data)
+      setEjuice(data[0].categories[0])
+      setDisposables(data[0].categories[1])
+      setHardware(data[0].categories[2])
+    })}
+
+useEffect(() => {
+  fetchCatalogs()
+}, [])
   
-  
+
   let theme = createTheme({
     palette: {
       primary: {
@@ -34,9 +54,9 @@ function App() {
         
           <Route path="/" element={<Home/>}/>
           {/* <Route path="/" element={<Navigate to="/home"/>}/> */}
-          <Route path='/ejuice' element={<Ejuice/>}/>
-          <Route path='/disposables' element={<Disposables/>}/>
-          <Route path='/hardware' element={<Hardware/>}/>
+          <Route path='/ejuice' element={<Ejuice ejuice={ejuice}/>}/>
+          <Route path='/disposables' element={<Disposables disposables={disposables}/>}/>
+          <Route path='/hardware' element={<Hardware hardware={hardware}/>}/>
           <Route path='/contact' element={<Contact/>} theme={theme} />
           
       </Routes>

@@ -1,27 +1,31 @@
 import * as React from 'react';
-import "./ProductCards.css"
+import "./BrandCards.css"
 
 
 
 
-const ProductCards = () => {
+const DisposablesBrandCards = () => {
 
 
 
   return (
     <div class="wrapper">
   <div class="cols">
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col" onTouchStart="this.classList.toggle('hover');">
 				<div class="container">
 					<div class="front" >
 						<div class="inner">
 							<p>Brand Image</p>
-              <span>Brand name</span>
+							<br/>
+              					<span>Brand name</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-						  <p>Product Info</p>
+						  <p>Brand Info</p>
+						  <br/>
+						  <br/>
+							<h5>Click to view products</h5>
 						</div>
 					</div>
 				</div>
@@ -31,4 +35,4 @@ const ProductCards = () => {
     );
 }
 
-export default ProductCards
+export default DisposablesBrandCards

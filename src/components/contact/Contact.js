@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Alert from '@mui/material/Alert';
 import './Contact.css'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
@@ -13,58 +14,48 @@ import emailjs from 'emailjs-com';
 
 const Contact = () => {
 
-  // const [uploadFiles, setUploadFiles] = React.useState('');
+  // const [uploadFiles, setUploadFiles] = useState('');
+  const [status, setStatus] = useState(undefined)
   const fileUploadRef = useRef()
 
   const form = useRef()
 
   const sendEmail = (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     
     emailjs.sendForm(
       process.env.REACT_APP_SERVICE_ID,
       process.env.REACT_APP_TEMPLATE_ID,
       form.current,
       process.env.REACT_APP_USER_ID
-    ).then(
-      result => console.log(result.text),
-      error => console.log(error.text)
-    )
-    
+    ).then(() => {
+      setStatus({type: 'success'})
+    })
+    .catch((error) => {
+      setStatus({type: 'error', error})
+    })
   };
-
-
-  // const [toSend, setToSend] = useState({
-  //   name: '',
-  //   email: '',
-  //   comments: '',
-  // });
-
-  // const onSubmit = (e) => {
-  //   e.preventDefault();
-  //   send(
-  //     'sales_email',
-  //     'template_4hmh5wp',
-  //     toSend,
-  //     'ghBZ2_yWASaU-uDGV'
-  //   )
-  //     .then((response) => {
-  //       console.log('SUCCESS!', response.status, response.text);
-  //     })
-  //     .catch((err) => {
-  //       console.log('FAILED...', err);
-  //     });
-  //   };
-
-  // const handleChange = (e) => {
-  //   setToSend({ ...toSend, [e.target.name]: e.target.value });
-  // };
-
 
 
   return (
     <div className="contact">
     <h2 className="upload-msg">Please upload EIN & UBI before submitting!</h2>
+        
+      <div className="alert_msg">
+        {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 440, opacity: .9}}>
+          YAY! You sent us a message. Stay cloudy!
+        </Alert>}
+
+        {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 440, opacity: .9}}>
+          Oh no...something went wrong. Gotta love technology!
+        </Alert>}
+      </div>
+      <div className="alert_msg">
+      <Alert variant="filled" severity="success" className="success_alert" style={{width: 440, opacity: .9}}>
+          YAY! You sent us a message. Stay cloudy!
+        </Alert>
+      </div>
+
       <div className='form' >
         <Box
           ref={form}
@@ -75,6 +66,7 @@ const Contact = () => {
           noValidate
           autoComplete="off"
         >
+        
           <TextField
             name="name"
             className="name"
@@ -89,9 +81,6 @@ const Contact = () => {
           />
           <div className="comments">
           <TextField
-          // sx={{
-          //   '& input': { height: '20ch',  }, 
-          // }}
             multiline
             rows={6}
             name="comments"

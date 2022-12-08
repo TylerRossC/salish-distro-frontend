@@ -1,15 +1,15 @@
 import React from 'react'
-import ProductCards from './ProductCards'
-import "./Ejuice.css"
+import DisposablesBrandCard from '../DisposablesBrandCard'
+import "./Disposables.css"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-const Hardware = () => {
+const Disposables = () => {
   return (
-    <div className="hardware">
-    Hardware
-    <div className="product-cards">
-    <ProductCards/>
+    <div className="disposables">
+    Disposables
+    <div className="brand-cards">
+    <DisposablesBrandCard/>
     </div>
     <div className="pagination">
     <Stack spacing={2}>
@@ -20,4 +20,4 @@ const Hardware = () => {
   )
 }
 
-export default Hardware
+export default Disposables
