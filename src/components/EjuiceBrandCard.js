@@ -22,10 +22,7 @@ const EjuiceBrandCard = ({brand}) => {
 					</div>
 					<div class="back">
 						<div class="inner">
-						  <p class="info">{brand.info}</p>
-						  <br/>
-						  <br/>
-						  <br/>
+						  <p>{brand.info}</p>
 							<h5>Click to view products</h5>
 						</div>
 					</div>

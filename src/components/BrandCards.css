@@ -35,7 +35,8 @@
               perspective: 1000px;
   }
   
-  .front{background-size: cover;
+  .front{
+    background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
     border-radius: 10px;
       background-position: center;
@@ -69,14 +70,13 @@
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       text-align: center;
-      overflow-wrap: normal;
-      display:flex;
-      flex-wrap: wrap;
+      min-width: fit-content;
       min-height: 200px;
       height: auto;
       border-radius: 10px;
       color: #fff;
       font-size: 1rem;
+      
       
   }
   
@@ -124,6 +124,7 @@
       top: 50%;
       position: absolute;
       left: 0;
+      height: auto;
       width: 100%;
       padding: 1rem;
       -webkit-box-sizing: border-box;
@@ -132,6 +133,8 @@
       -webkit-perspective: inherit;
               perspective: inherit;
       z-index: 2;
+      overflow-wrap: normal;
+      white-space: initial;
   }
   
   .container .back{
