@@ -4,12 +4,19 @@ import "./Disposables.css"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-const Disposables = () => {
+const Disposables = ({disposables}) => {
+
+  const renderDisposablesBrandCards = () => {
+    return disposables.brands ? disposables.brands.map((brand) => {
+      return <DisposablesBrandCard key={brand.id} brand={brand} />
+    }) : null
+  }
+
   return (
     <div className="disposables">
     Disposables
     <div className="brand-cards">
-    <DisposablesBrandCard/>
+    {renderDisposablesBrandCards()}
     </div>
     <div className="pagination">
     <Stack spacing={2}>

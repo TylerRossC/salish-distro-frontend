@@ -1,10 +1,11 @@
 import * as React from 'react';
 import "./BrandCards.css"
+import EjuiceBrandCard from './EjuiceBrandCard';
 
 
 
 
-const HardwareBrandCards = () => {
+const HardwareBrandCards = ({brand}) => {
 
 
 
@@ -17,12 +18,12 @@ const HardwareBrandCards = () => {
 						<div class="inner">
 							<p>Brand Image</p>
 							<br/>
-              					<span>Brand name</span>
+              					<span>{brand.name}</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-						  <p>Brand Info</p>
+						  <p>{brand.info}</p>
 						  <br/>
 						  <br/>
 							<h5>Click to view products</h5>

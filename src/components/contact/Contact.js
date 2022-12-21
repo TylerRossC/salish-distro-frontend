@@ -8,6 +8,7 @@ import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import NavigationIcon from '@mui/icons-material/Navigation';
 import emailjs from 'emailjs-com';
+// import FileUpload from '../FileUpload.js'
 
 
 
@@ -16,6 +17,7 @@ const Contact = () => {
 
   // const [uploadFiles, setUploadFiles] = useState('');
   const [status, setStatus] = useState(undefined)
+  const [files, setFiles] = useState([])
   const fileUploadRef = useRef()
 
   const form = useRef()
@@ -36,6 +38,12 @@ const Contact = () => {
     })
   };
 
+  const handleAttachments = () => {
+    fileUploadRef.current && fileUploadRef.current.click()
+    console.log(fileUploadRef.current.files[0])
+    setFiles([...files, fileUploadRef.current.files[0]])
+  }
+
 
   return (
     <div className="contact">
@@ -47,7 +55,7 @@ const Contact = () => {
         </Alert>}
 
         {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 440, opacity: .9}}>
-          Oh no...something went wrong. Gotta love technology!
+          Oh no...something went wrong. Please make sure name and email aren't blank and proper attachments are uploaded!
         </Alert>}
       </div>
       <div className="alert_msg">
@@ -86,7 +94,7 @@ const Contact = () => {
             name="comments"
             className="comments"
             label="Comments"
-            required
+            // required
           />
           
           <input
@@ -98,7 +106,7 @@ const Contact = () => {
           />
           </div>
           <div>
-            <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }} onClick={() => fileUploadRef.current && fileUploadRef.current.click()}>
+            <Box className="upload-btn" sx={{ '& > :not(style)': { m: 1 } }} onClick={handleAttachments}>
             <Fab variant="extended" size="medium" sx={{bgcolor: 'secondary.main'}} aria-label="add" >
               <AddIcon sx={{ mr: 1 }} />
               Upload
@@ -118,6 +126,8 @@ const Contact = () => {
             name="attachments"
             className="attachments"
             label="Attachments"
+            // value={files.map(file => <p>{file.name}</p>)}
+            defaultValue="*Successfully uploaded documents will show here*"
             required
             multiline
             rows={3}
@@ -128,6 +138,7 @@ const Contact = () => {
           </div>
         </Box>
       </div>
+      {/* <FileUpload/> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import "./BrandCards.css"
 
 
 
-const DisposablesBrandCards = () => {
+const DisposablesBrandCards = ({brand}) => {
 
 
 
@@ -17,12 +17,12 @@ const DisposablesBrandCards = () => {
 						<div class="inner">
 							<p>Brand Image</p>
 							<br/>
-              					<span>Brand name</span>
+              					<span>{brand.name}</span>
 						</div>
 					</div>
 					<div class="back">
 						<div class="inner">
-						  <p>Brand Info</p>
+						  <p>{brand.info}</p>
 						  <br/>
 						  <br/>
 							<h5>Click to view products</h5>
