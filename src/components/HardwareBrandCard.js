@@ -16,7 +16,7 @@ const HardwareBrandCards = ({brand}) => {
 				<div class="container">
 					<div class="front" >
 						<div class="inner">
-							<p>Brand Image</p>
+						<img class="logo" src={brand.logo}/>
 							<br/>
               					<span>{brand.name}</span>
 						</div>
@@ -24,8 +24,6 @@ const HardwareBrandCards = ({brand}) => {
 					<div class="back">
 						<div class="inner">
 						  <p>{brand.info}</p>
-						  <br/>
-						  <br/>
 							<h5>Click to view products</h5>
 						</div>
 					</div>

@@ -136,6 +136,12 @@
       overflow-wrap: normal;
       white-space: initial;
   }
+
+  .inner .logo{
+    height: 145px;
+    width: 175px;
+    border-radius: 10px;
+  }
   
   .container .back{
       -webkit-transform: rotateY(180deg);
