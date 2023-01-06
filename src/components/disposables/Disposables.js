@@ -4,11 +4,11 @@ import "./Disposables.css"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-const Disposables = ({disposables, setProducts}) => {
+const Disposables = ({disposables, setProducts, setImage}) => {
 
   const renderDisposablesBrandCards = () => {
     return disposables.brands ? disposables.brands.map((brand) => {
-      return <DisposablesBrandCard key={brand.id} brand={brand} setProducts={setProducts}/>
+      return <DisposablesBrandCard key={brand.id} brand={brand} setProducts={setProducts} setImage={setImage}/>
     }) : null
   }
 

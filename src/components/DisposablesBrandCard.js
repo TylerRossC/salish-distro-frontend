@@ -1,12 +1,19 @@
 import * as React from 'react';
 import "./BrandCards.css"
+import { useNavigate } from "react-router-dom";
 
 
 
 
-const DisposablesBrandCards = ({brand, setProducts}) => {
+const DisposablesBrandCards = ({brand, setProducts, setImage}) => {
 
-
+	let navigate = useNavigate()
+	const routeChange = async () =>{
+		let path = '/products' 
+		setImage(brand.name)
+		await setProducts(brand.products)
+		navigate(path)
+	}
 
   return (
     <div class="wrapper">
@@ -20,7 +27,7 @@ const DisposablesBrandCards = ({brand, setProducts}) => {
               					<span>{brand.name}</span>
 						</div>
 					</div>
-					<div class="back">
+					<div class="back" onClick={routeChange}>
 						<div class="inner">
 						  <p>{brand.info}</p>
 							<h5>Click to view products</h5>

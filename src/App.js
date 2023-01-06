@@ -60,8 +60,8 @@ useEffect(() => {
           <Route path="/" element={<Home/>}/>
           {/* <Route path="/" element={<Navigate to="/home"/>}/> */}
           <Route path='/ejuice' element={<Ejuice ejuice={ejuice} setProducts={setCategoryProducts} setImage={setImage}/>}/>
-          <Route path='/disposables' element={<Disposables disposables={disposables} setProducts={setCategoryProducts}/>}/>
-          <Route path='/hardware' element={<Hardware hardware={hardware} setProducts={setCategoryProducts}/>}/>
+          <Route path='/disposables' element={<Disposables disposables={disposables} setProducts={setCategoryProducts} setImage={setImage}/>}/>
+          <Route path='/hardware' element={<Hardware hardware={hardware} setProducts={setCategoryProducts} setImage={setImage}/>}/>
           <Route path='/contact' element={<Contact/>} theme={theme} />
           <Route path='/products' element={<ProductsPage products={categoryProducts} image={image}/>}/>
           
