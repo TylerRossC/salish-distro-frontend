@@ -4,11 +4,11 @@ import "./Hardware.css"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-const Hardware = ({hardware}) => {
+const Hardware = ({hardware, setProducts}) => {
 
   const renderHardwareBrandCards = () => {
     return hardware.brands ? hardware.brands.map((brand) => {
-      return <HardwareBrandCard key={brand.id} brand={brand} />
+      return <HardwareBrandCard key={brand.id} brand={brand} setProducts={setProducts}/>
     }) : null
   }
 

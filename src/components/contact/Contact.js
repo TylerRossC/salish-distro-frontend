@@ -47,7 +47,7 @@ const Contact = () => {
 
   return (
     <div className="contact">
-    <h2 className="upload-msg">Please upload EIN & UBI before submitting!</h2>
+    <h2 className="upload-msg">Please upload UBI & leave EIN in the comments before submitting!</h2>
         
       <div className="alert_msg">
         {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 440, opacity: .9}}>
@@ -94,7 +94,7 @@ const Contact = () => {
             name="comments"
             className="comments"
             label="Comments"
-            // required
+            required
           />
           
           <input

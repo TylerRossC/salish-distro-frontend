@@ -5,7 +5,7 @@ import EjuiceBrandCard from './EjuiceBrandCard';
 
 
 
-const HardwareBrandCards = ({brand}) => {
+const HardwareBrandCards = ({brand, setProducts}) => {
 
 
 

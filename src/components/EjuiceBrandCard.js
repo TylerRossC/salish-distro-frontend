@@ -1,11 +1,19 @@
 import * as React from 'react';
 import "./BrandCards.css"
+import { useNavigate } from "react-router-dom";
 
 
 
 
-const EjuiceBrandCard = ({brand}) => {
+const EjuiceBrandCard = ({brand, setProducts, setImage}) => {
 
+	let navigate = useNavigate()
+	const routeChange = async () =>{
+		let path = '/products' 
+		setImage(brand.name)
+		await setProducts(brand.products)
+		navigate(path)
+	}
 
 
   return (
@@ -20,7 +28,7 @@ const EjuiceBrandCard = ({brand}) => {
               					<span>{brand.name}</span>
 						</div>
 					</div>
-					<div class="back">
+					<div class="back" onClick={routeChange}>
 						<div class="inner">
 						  <p>{brand.info}</p>
 							<h5>Click to view products</h5>

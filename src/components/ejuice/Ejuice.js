@@ -4,14 +4,15 @@ import "./Ejuice.css"
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-const Ejuice = ({ejuice}) => {
+const Ejuice = ({ejuice, setProducts, setImage}) => {
 
 
 const renderEjuiceBrandCards = () => {
   return ejuice.brands ? ejuice.brands.map((brand) => {
-    return <EjuiceBrandCard key={brand.id} brand={brand} />
+    return <EjuiceBrandCard key={brand.id} brand={brand} setProducts={setProducts} setImage={setImage}/>
   }) : null
 }
+
 
   
   return (

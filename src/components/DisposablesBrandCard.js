@@ -4,7 +4,7 @@ import "./BrandCards.css"
 
 
 
-const DisposablesBrandCards = ({brand}) => {
+const DisposablesBrandCards = ({brand, setProducts}) => {
 
 
 
