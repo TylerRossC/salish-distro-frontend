@@ -22,7 +22,7 @@ const DisposablesBrandCards = ({brand, setProducts, setImage}) => {
 				<div class="container">
 					<div class="front" >
 						<div class="inner">
-						<img class="logo" src={brand.logo}/>
+						<img class="logo" src={brand.logo} alt=''/>
 							<br/>
               					<span>{brand.name}</span>
 						</div>
