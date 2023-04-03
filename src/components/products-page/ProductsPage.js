@@ -13,7 +13,7 @@ const ProductsPage = ({products, image}) => {
     
   return (
     <div class= "main">
-      <img class= "image" src={images[image]}></img>
+      <img class= "image" src={images[image]} alt=''></img>
       {renderProducts()}
     </div>
   )
