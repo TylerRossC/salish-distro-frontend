@@ -128,7 +128,7 @@ const Contact = () => {
             label="Attachments"
             // value={files.map(file => <p>{file.name}</p>)}
             defaultValue="*Successfully uploaded documents will show here*"
-            required
+            // required
             multiline
             rows={3}
             InputProps={{
