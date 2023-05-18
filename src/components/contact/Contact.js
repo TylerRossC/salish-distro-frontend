@@ -102,7 +102,7 @@ const Contact = () => {
             ref={fileUploadRef}
             type="file"
             style={{display: "none"}}
-            required
+            // required
           />
           </div>
           <div>
