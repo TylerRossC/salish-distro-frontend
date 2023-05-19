@@ -23,9 +23,12 @@ const [hardware, setHardware] = useState([])
 const[categoryProducts, setCategoryProducts] = useState([])
 const[image, setImage] = useState("")
 
+const configObj = {
+  "Access-Control-Allow-Origin": "https://www.hyvexsalish.com"
+}
 
 const fetchCatalogs = () => {
-  fetch('https://www.hyvexsalish.com')
+  fetch('https://www.hyvexsalish.com', configObj)
     .then(resp => resp.json())
     .then(data => {
       console.log(data)
