@@ -25,7 +25,7 @@ const[image, setImage] = useState("")
 
 
 const fetchCatalogs = () => {
-  fetch('https://www.salish-distro-backend.com')
+  fetch('https://www.hyvexsalish.com')
     .then(resp => resp.json())
     .then(data => {
       console.log(data)
