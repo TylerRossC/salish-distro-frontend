@@ -23,12 +23,9 @@ const [hardware, setHardware] = useState([])
 const[categoryProducts, setCategoryProducts] = useState([])
 const[image, setImage] = useState("")
 
-const configObj = {
-  mode:'no-cors'
-}
 
 const fetchCatalogs = () => {
-  fetch('https://www.hyvexsalish.com', configObj)
+  fetch('https://www.hyvexsalish.com')
     .then(resp => resp.json())
     .then(data => {
       console.log(data)
