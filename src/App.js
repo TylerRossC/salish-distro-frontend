@@ -25,7 +25,7 @@ const[image, setImage] = useState("")
 
 
 const fetchCatalogs = () => {
-  fetch('http://salish-distribution.us-west-2.elasticbeanstalk.com/')
+  fetch('https://www.salish-distro-backend.com')
     .then(resp => resp.json())
     .then(data => {
       console.log(data)
