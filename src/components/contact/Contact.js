@@ -49,7 +49,6 @@ const Contact = () => {
 
   return (
     <div className="contact">
-    <h2 className="upload-msg"></h2>
         
       <div className="alert_msg">
         {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
