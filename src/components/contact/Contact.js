@@ -44,24 +44,26 @@ const Contact = () => {
     setFiles([...files, fileUploadRef.current.files[0]])
   }
 
+  
+
 
   return (
     <div className="contact">
-    <h2 className="upload-msg">Please upload UBI & leave EIN in the comments before submitting!</h2>
+    <h2 className="upload-msg"></h2>
         
       <div className="alert_msg">
-        {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 440, opacity: .9}}>
-          YAY! You sent us a message. Stay cloudy!
+        {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
+        We received your message and will be in touch shortly! Stay cloudy!
         </Alert>}
 
-        {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 440, opacity: .9}}>
-          Oh no...something went wrong. Please make sure name and email aren't blank and proper attachments are uploaded!
+        {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 650, opacity: .9}}>
+          Oh no...something went wrong. Please make sure name and/or email aren't blank!
         </Alert>}
       </div>
       <div className="alert_msg">
-      <Alert variant="filled" severity="success" className="success_alert" style={{width: 440, opacity: .9}}>
-          YAY! You sent us a message. Stay cloudy!
-        </Alert>
+      {/* <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
+          We received your message and will be in touch shortly! Stay cloudy!
+        </Alert> */}
       </div>
 
       <div className='form' >
@@ -69,7 +71,7 @@ const Contact = () => {
           ref={form}
           component="form"
           sx={{
-            '& > :not(style)': { m: 1, width: '40ch' },
+            '& > :not(style)': { m: 1, width: '50ch' },
           }}
           noValidate
           autoComplete="off"
@@ -79,12 +81,26 @@ const Contact = () => {
             name="name"
             className="name"
             label="Name"
+            sx={{ 
+              bgcolor: 'rgba(0,0,0,.3)',
+              borderRadius: '5px',
+              fontWeight: 'bold'
+              }}
+              InputLabelProps={{style: {fontWeight: 'bold'}}}
+              inputProps={{style: {fontSize: 20}}}
             required
           />
           <TextField
             name="email"
             className="email"
             label="Email"
+            sx={{ 
+              bgcolor: 'rgba(0,0,0,.3)',
+              borderRadius: '5px',
+              fontWeight: 'bold'
+              }}
+              InputLabelProps={{style: {fontWeight: 'bold'}}}
+              inputProps={{style: {fontSize: 20}}}
             required
           />
           <div className="comments">
@@ -94,6 +110,13 @@ const Contact = () => {
             name="comments"
             className="comments"
             label="Comments"
+            sx={{ 
+              bgcolor: 'rgba(0,0,0,.3)',
+              borderRadius: '5px',
+              fontWeight: 'bold'
+              }}
+              InputLabelProps={{style: {fontWeight: 'bold'}}}
+              inputProps={{style: {fontSize: 20}}}
             required
           />
           
@@ -126,14 +149,20 @@ const Contact = () => {
             name="attachments"
             className="attachments"
             label="Attachments"
-            // value={files.map(file => <p>{file.name}</p>)}
             defaultValue="*Successfully uploaded documents will show here*"
+            // value={files.map(file => <p>{file.name}</p>)}
             // required
             multiline
             rows={3}
             InputProps={{
             readOnly: true,
           }}
+          sx={{ 
+            bgcolor: 'rgba(0,0,0,.3)',
+              borderRadius: '5px'
+              }}
+              InputLabelProps={{style: {fontWeight: 'bold'}}}
+              inputProps={{style: {fontSize: 20}}}
           />
           </div>
         </Box>

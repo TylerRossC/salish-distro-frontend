@@ -1,4 +1,16 @@
-.main {
-    display: flex;
+#main {
+    /* display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    margin: 0 auto; */
+    
+}
+
+.image {
+    width: 850px;
+    border-color:#4690cd;
+    border-style: solid;
+    float: left;
+    margin-left: 200px;
 }
 

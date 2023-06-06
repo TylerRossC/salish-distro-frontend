@@ -1,5 +1,6 @@
 import React from 'react'
 import images from '../../product-images/productImages'
+import "./ProductsPage.css"
 
 const ProductsPage = ({products, image}) => {
 
@@ -12,9 +13,13 @@ const ProductsPage = ({products, image}) => {
 
     
   return (
-    <div class= "main">
-      <img class= "image" src={images[image]} alt=''></img>
-      {renderProducts()}
+    <div id="main">
+        <br/>
+        <img class= "image" src={images[image]} alt=''></img>
+        <br/>
+        <br/>
+        {renderProducts()}
+  
     </div>
   )
 }
