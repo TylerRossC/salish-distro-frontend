@@ -15,6 +15,13 @@ const ProductsPage = ({products, image}) => {
   return (
     <div id="main">
         <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <img class= "image" src={images[image]} alt=''></img>
         <br/>
         <br/>
