@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import Alert from '@mui/material/Alert';
+// import Alert from '@mui/material/Alert';
 import './Contact.css'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
@@ -16,7 +16,7 @@ import emailjs from 'emailjs-com';
 const Contact = () => {
 
   // const [uploadFiles, setUploadFiles] = useState('');
-  const [status, setStatus] = useState(undefined)
+  // const [status, setStatus] = useState(undefined)
   const [files, setFiles] = useState([])
   const fileUploadRef = useRef()
 
