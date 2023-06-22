@@ -50,7 +50,7 @@ const Contact = () => {
   return (
     <div className="contact">
         
-      <div className="alert_msg">
+      {/* <div className="alert_msg">
         {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
         We received your message and will be in touch shortly! Stay cloudy!
         </Alert>}
@@ -58,12 +58,12 @@ const Contact = () => {
         {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 650, opacity: .9}}>
           Oh no...something went wrong. Please make sure name and/or email aren't blank!
         </Alert>}
-      </div>
-      <div className="alert_msg">
+      </div> */}
+      {/* <div className="alert_msg"> */}
       {/* <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
           We received your message and will be in touch shortly! Stay cloudy!
         </Alert> */}
-      </div>
+      {/* </div> */}
 
       <div className='form' >
         <Box
