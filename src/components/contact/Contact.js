@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-// import Alert from '@mui/material/Alert';
+import Alert from '@mui/material/Alert';
 import './Contact.css'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
@@ -16,7 +16,7 @@ import emailjs from 'emailjs-com';
 const Contact = () => {
 
   // const [uploadFiles, setUploadFiles] = useState('');
-  // const [status, setStatus] = useState(undefined)
+  const [status, setStatus] = useState(undefined)
   const [files, setFiles] = useState([])
   const fileUploadRef = useRef()
 
@@ -50,12 +50,12 @@ const Contact = () => {
   return (
     <div className="contact">
         
-      {/* <div className="alert_msg">
+      <div className="alert_msg">
         {status?.type === 'success' && <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
         We received your message and will be in touch shortly! Stay cloudy!
         </Alert>}
 
-        {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 650, opacity: .9}}>
+        {/* {status?.type === 'error' && <Alert variant="filled" severity="error" className="error_alert" style={{width: 650, opacity: .9}}>
           Oh no...something went wrong. Please make sure name and/or email aren't blank!
         </Alert>}
       </div> */}
@@ -63,7 +63,7 @@ const Contact = () => {
       {/* <Alert variant="filled" severity="success" className="success_alert" style={{width: 550, opacity: .9}}>
           We received your message and will be in touch shortly! Stay cloudy!
         </Alert> */}
-      {/* </div> */}
+      </div>
 
       <div className='form' >
         <Box
