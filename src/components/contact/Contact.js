@@ -18,7 +18,7 @@ const Contact = () => {
   // const [uploadFiles, setUploadFiles] = useState('');
   const [status, setStatus] = useState(undefined)
   const [files, setFiles] = useState([])
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState(search)
   const fileUploadRef = useRef()
 
   const form = useRef()
