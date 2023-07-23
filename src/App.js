@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom'
 import Home from './components/Home'
 import Ejuice from './components/ejuice/Ejuice'
 import Disposables from './components/disposables/Disposables'
-import Hardware from './components/hardware/Hardware'
+// import Hardware from './components/hardware/Hardware'
 import Contact from './components/contact/Contact'
 import ProductsPage from './components/products-page/ProductsPage'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -19,7 +19,7 @@ function App() {
 // const [catalogs, setCatalog] = useState([])
 const [ejuice, setEjuice] = useState([])
 const [disposables, setDisposables] = useState([])
-const [hardware, setHardware] = useState([])
+// const [hardware, setHardware] = useState([])
 const[categoryProducts, setCategoryProducts] = useState([])
 const[image, setImage] = useState("")
 
@@ -31,7 +31,7 @@ const fetchCatalogs = () => {
       console.log(data)
       setEjuice(data[0].categories[0])
       setDisposables(data[0].categories[1])
-      setHardware(data[0].categories[2])
+      // setHardware(data[0].categories[2])
     })}
 
 useEffect(() => {
@@ -61,7 +61,7 @@ useEffect(() => {
           {/* <Route path="/" element={<Navigate to="/home"/>}/> */}
           <Route path='/ejuice' element={<Ejuice ejuice={ejuice} setProducts={setCategoryProducts} setImage={setImage}/>}/>
           <Route path='/disposables' element={<Disposables disposables={disposables} setProducts={setCategoryProducts} setImage={setImage}/>}/>
-          <Route path='/hardware' element={<Hardware hardware={hardware} setProducts={setCategoryProducts} setImage={setImage}/>}/>
+          {/* <Route path='/hardware' element={<Hardware hardware={hardware} setProducts={setCategoryProducts} setImage={setImage}/>}/> */}
           <Route path='/contact' element={<Contact/>} theme={theme} />
           <Route path='/products' element={<ProductsPage products={categoryProducts} image={image}/>}/>
           

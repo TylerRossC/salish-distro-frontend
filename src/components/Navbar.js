@@ -152,7 +152,7 @@ const Navbar = () => {
                     <MenuItem onClick={() => navigate("/")}>Home</MenuItem>
                     <MenuItem onClick={() => navigate("/ejuice")}>Ejuice</MenuItem>
                     <MenuItem onClick={() => navigate("/disposables")}>Disposables</MenuItem>
-                    <MenuItem onClick={() => navigate("/hardware")}>Hardware</MenuItem>
+                    {/* <MenuItem onClick={() => navigate("/hardware")}>Hardware</MenuItem> */}
                     <MenuItem onClick={() => navigate("/contact")}>Contact</MenuItem>
 
                   </MenuList>

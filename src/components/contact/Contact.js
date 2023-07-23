@@ -18,9 +18,12 @@ const Contact = () => {
   // const [uploadFiles, setUploadFiles] = useState('');
   const [status, setStatus] = useState(undefined)
   const [files, setFiles] = useState([])
+  const [search, setSearch] = useState('')
   const fileUploadRef = useRef()
 
   const form = useRef()
+
+  const cleanSearch = () =>setSearch('')
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -88,6 +91,7 @@ const Contact = () => {
               InputLabelProps={{style: {fontWeight: 'bold'}}}
               inputProps={{style: {fontSize: 20}}}
             required
+            onBlur={cleanSearch}
           />
           <TextField
             name="email"
