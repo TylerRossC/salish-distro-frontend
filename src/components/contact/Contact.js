@@ -84,7 +84,7 @@ const Contact = () => {
             className="name"
             label="Name"
             sx={{ 
-              bgcolor: 'rgba(0,0,0,.3)',
+              bgcolor: 'white',
               borderRadius: '5px',
               fontWeight: 'bold'
               }}
@@ -98,7 +98,7 @@ const Contact = () => {
             className="email"
             label="Email"
             sx={{ 
-              bgcolor: 'rgba(0,0,0,.3)',
+              bgcolor: 'white',
               borderRadius: '5px',
               fontWeight: 'bold'
               }}
@@ -114,7 +114,7 @@ const Contact = () => {
             className="comments"
             label="Comments"
             sx={{ 
-              bgcolor: 'rgba(0,0,0,.3)',
+              bgcolor: 'white',
               borderRadius: '5px',
               fontWeight: 'bold'
               }}
@@ -152,7 +152,7 @@ const Contact = () => {
             name="attachments"
             className="attachments"
             label="Attachments"
-            defaultValue="*Successfully uploaded documents will show here*"
+            defaultValue="*Successfully uploaded documents will show here (Building in Progress)*"
             // value={files.map(file => <p>{file.name}</p>)}
             // required
             multiline
@@ -161,7 +161,7 @@ const Contact = () => {
             readOnly: true,
           }}
           sx={{ 
-            bgcolor: 'rgba(0,0,0,.3)',
+            bgcolor: 'white',
               borderRadius: '5px'
               }}
               InputLabelProps={{style: {fontWeight: 'bold'}}}
