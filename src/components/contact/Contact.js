@@ -18,12 +18,12 @@ const Contact = () => {
   // const [uploadFiles, setUploadFiles] = useState('');
   const [status, setStatus] = useState(undefined)
   const [files, setFiles] = useState([])
-  const [search, setSearch] = useState(search)
+  const [search, setSearch] = useState('')
   const fileUploadRef = useRef()
 
   const form = useRef()
 
-  const cleanSearch = () =>setSearch('')
+  const cleanSearch = () =>setSearch(search)
 
   const sendEmail = (e) => {
     e.preventDefault()
